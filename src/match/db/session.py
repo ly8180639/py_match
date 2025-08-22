@@ -5,7 +5,8 @@ from ..config.settings import settings
 engine = create_engine(
     settings.DATABASE_URL,
     pool_size=settings.POOL_SIZE,
-    pool_pre_ping=True
+    pool_pre_ping=True,
+    echo=False,
 )
 
 SessionLocal = sessionmaker(
